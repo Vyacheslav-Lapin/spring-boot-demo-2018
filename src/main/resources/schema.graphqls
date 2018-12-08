@@ -1,0 +1,24 @@
+schema {
+    query: EntryPoint
+#    mutation: Mutation
+}
+
+type EntryPoint {
+    cart(id: Long): Cart
+}
+
+type Cart {
+    id: Long!
+    items:[Item]!
+    subTotal: BigDecimal
+}
+
+type Item {
+    quantity: Int!
+    productId: String!
+    total: BigDecimal!
+}
+
+#type Mutation {
+#
+#}
